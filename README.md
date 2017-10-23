@@ -1,3 +1,3 @@
 # TicTacToe
 
-SC-T-303-HUGB, fall semester 2017
+Late-term Assignment. SC-T-303-HUGB, fall semester 2017
