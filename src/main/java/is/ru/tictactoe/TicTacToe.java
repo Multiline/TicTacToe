@@ -69,6 +69,11 @@ public class TicTacToe
     	}
     }
 
+    public boolean isSpaceEmpty(int x, int y)
+    {
+        return (board[x][y] == '.');
+    }
+
 
 
 }

@@ -57,4 +57,19 @@ public class TicTacToeTest
     	tic.changePlayer();
     	assertEquals('o', tic.getCurrentPlayer());
     }
+
+    @Test
+    public void testIsEmptySpaceEmpty()
+    {
+        TicTacToe tic = new TicTacToe();
+        assertEquals(true, tic.isSpaceEmpty(2, 1));
+    }
+
+    @Test
+    public void testIsFullSpaceEmpty()
+    {
+        TicTacToe tic = new TicTacToe();
+        tic.markSpace(1,1);
+        assertEquals(false, tic.isSpaceEmpty(1,1));
+    }
 }
