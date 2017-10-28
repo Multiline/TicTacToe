@@ -15,7 +15,7 @@ public class TicTacToe
     		}
     	}
     }
-    
+
     public char getMark(int x, int y)
 	{
     	char mark = board[x][y];
