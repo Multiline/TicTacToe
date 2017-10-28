@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'is.ru.tictactoe.TicTacToe'
+mainClassName = 'is.ru.tictactoe.App'
 
 repositories
 {
