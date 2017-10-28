@@ -78,5 +78,15 @@ public class TicTacToeTest
 		assertEquals(true, tic.isWinner()); 
 	}	
 	
+	@Test
+	public void testDiaWinner()
+	{
+    	TicTacToe tic = new TicTacToe();
+		tic.markSpace(0,0);
+		tic.markSpace(1,1);
+		tic.markSpace(2,2);
+		assertEquals(true, tic.isWinner()); 
+	}		
+	
 	
 }

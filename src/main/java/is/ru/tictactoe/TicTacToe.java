@@ -81,6 +81,11 @@ public class TicTacToe
 			return true;
 		}
 		
+		if (diaWin())
+		{
+			return true;
+		}
+		
 		return false;
 
 	}
@@ -131,5 +136,42 @@ public class TicTacToe
 		}
 		return false;		
 	}
-	
+
+	private boolean diaWin()
+	{
+		int counter = 0;
+		
+		// Checks the \ pattern.
+		for (int i = 0; i < boardSize; i++)
+		{
+			if (board[i][i] == currentPlayer)
+			{
+				counter++;
+			}
+		}
+							
+		if (counter == 3)
+		{
+			return true;
+		}
+		
+		
+		counter = 0;
+		
+		// Checks the / pattern
+		for (int i = 0; i < boardSize; i++)
+		{
+			if (board[i][boardSize - i - 1] == currentPlayer)
+			{
+				counter++;
+			}
+		}
+		
+		if (counter == 3)
+		{
+			return true;
+		}
+		
+		return false;	
+	}
 }
