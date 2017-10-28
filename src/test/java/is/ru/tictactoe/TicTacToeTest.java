@@ -57,6 +57,36 @@ public class TicTacToeTest
     	tic.changePlayer();
     	assertEquals('o', tic.getCurrentPlayer());
     }
+  
+	@Test
+	public void testHorWinner()
+	{
+    	TicTacToe tic = new TicTacToe();
+		tic.markSpace(0,0);
+		tic.markSpace(0,1);
+		tic.markSpace(0,2);
+		assertEquals(true, tic.isWinner()); 
+	}
+	
+	@Test
+	public void testVerWinner()
+	{
+    	TicTacToe tic = new TicTacToe();
+		tic.markSpace(0,0);
+		tic.markSpace(1,0);
+		tic.markSpace(2,0);
+		assertEquals(true, tic.isWinner()); 
+	}	
+	
+	@Test
+	public void testDiaWinner()
+	{
+    	TicTacToe tic = new TicTacToe();
+		tic.markSpace(0,0);
+		tic.markSpace(1,1);
+		tic.markSpace(2,2);
+		assertEquals(true, tic.isWinner()); 
+	}		
 
     @Test
     public void testIsEmptySpaceEmpty()

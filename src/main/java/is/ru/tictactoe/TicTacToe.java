@@ -61,6 +61,49 @@ public class TicTacToe
     	{
     	}
     }
+	
+	public boolean isWinner()
+	{
+		if (horWin())
+		{	
+			return true;
+		}
+		
+		if (verWin())
+		{
+			return true;
+		}
+		
+		if (diaWin())
+		{
+			return true;
+		}
+		
+		return false;
+	}
+	
+	// Checks the - pattern.
+	private boolean horWin()
+	{
+		for (int i = 0; i < boardSize; i++)
+		{
+			int counter = 0;
+			
+			for (int j = 0; j < boardSize; j++)
+			{
+				if (board[i][j] == currentPlayer)
+				{
+					counter++;
+				}
+			}
+			if (counter == 3)
+			{
+				return true;
+			}
+			
+		}
+		return false;
+	}
 
     public boolean isSpaceEmpty(int x, int y)
     {  
@@ -68,7 +111,7 @@ public class TicTacToe
 
         return (board[x][y] == '.');
     }
-
+  
     public void validateBoardIndex(int x, int y)
     {
         boolean xIsInvalid = ((x < 0) || (x > boardSize - 1));
@@ -80,5 +123,65 @@ public class TicTacToe
         }
     }
 
+	private boolean verWin()
+	{
+		for (int j = 0; j < boardSize; j++)
+		{
+			int counter = 0;
+			
+			// Checks the | pattern.
+			
+			for (int i = 0; i < boardSize; i++)
+			{
+				if (board[i][j] == currentPlayer)
+				{
+					counter++;
+				}
+			}
+			if (counter == 3)
+			{
+				return true;
+			}
+			
+		}
+		return false;		
+	}
 
+	private boolean diaWin()
+	{
+		int counter = 0;
+		
+		// Checks the \ pattern.
+		for (int i = 0; i < boardSize; i++)
+		{
+			if (board[i][i] == currentPlayer)
+			{
+				counter++;
+			}
+		}
+							
+		if (counter == 3)
+		{
+			return true;
+		}
+		
+		
+		counter = 0;
+		
+		// Checks the / pattern
+		for (int i = 0; i < boardSize; i++)
+		{
+			if (board[i][boardSize - i - 1] == currentPlayer)
+			{
+				counter++;
+			}
+		}
+		
+		if (counter == 3)
+		{
+			return true;
+		}
+		
+		return false;	
+	}
 }
