@@ -57,4 +57,85 @@ public class TicTacToeTest
     	tic.changePlayer();
     	assertEquals('o', tic.getCurrentPlayer());
     }
+
+    @Test
+    public void testIsEmptySpaceEmpty()
+    {
+        TicTacToe tic = new TicTacToe();
+        assertEquals(true, tic.isSpaceEmpty(2, 1));
+    }
+
+    @Test
+    public void testIsFullSpaceEmpty()
+    {
+        TicTacToe tic = new TicTacToe();
+        tic.markSpace(1,1);
+        assertEquals(false, tic.isSpaceEmpty(1,1));
+    }
+
+    @Test 
+    public void testIsSpaceEmptyInvalidIndex()
+    {
+        try
+        {
+            TicTacToe tic = new TicTacToe();
+            tic.isSpaceEmpty(3,3);
+            Assert.fail();
+        }
+        catch (Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+
+        try
+        {
+            TicTacToe tic = new TicTacToe();
+            tic.isSpaceEmpty(-2,0);
+            Assert.fail();
+        }
+        catch (Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+    }
+
+    @Test
+    public void testValidateBoardIndex()
+    {
+        TicTacToe tic = new TicTacToe();
+
+        try
+        {
+            tic.validateBoardIndex(1,2);
+        }
+        catch (Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+
+        try
+        {
+            tic.validateBoardIndex(-1,0);
+            Assert.fail();
+        }
+        catch(Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+
+        try
+        {
+            tic.validateBoardIndex(2,5);
+            Assert.fail();
+        }
+        catch(Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+    }
 }
