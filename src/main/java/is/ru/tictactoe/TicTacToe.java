@@ -17,6 +17,18 @@ public class TicTacToe
     	}
     }
 
+    public void printBoard()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                System.out.printf(getMark(i, j) + " ");
+            }
+            System.out.printf("%n");
+        }
+    }
+
     public char getMark(int x, int y)
 	{
     	char mark = board[x][y];
