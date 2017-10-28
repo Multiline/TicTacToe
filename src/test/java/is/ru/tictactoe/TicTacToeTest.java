@@ -49,4 +49,12 @@ public class TicTacToeTest
     	}
     	
     }
+
+    @Test
+    public void testChangePlayer()
+    {
+    	TicTacToe tic = new TicTacToe();
+    	tic.changePlayer();
+    	assertEquals('o', tic.getCurrentPlayer());
+    }
 }

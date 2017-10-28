@@ -49,5 +49,26 @@ public class TicTacToe
 
     }
 
+    public char getCurrentPlayer()
+    {
+    	return currentPlayer;
+    }
+
+    public void changePlayer()
+    {
+    	if(currentPlayer == 'x')
+    	{
+    		currentPlayer = 'o';
+    	}
+    	else if(currentPlayer == 'o')
+    	{
+    		currentPlayer = 'x';
+    	}
+    	else
+    	{
+    	}
+    }
+
+
 
 }
