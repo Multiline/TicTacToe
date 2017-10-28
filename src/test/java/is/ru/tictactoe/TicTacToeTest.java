@@ -57,7 +57,7 @@ public class TicTacToeTest
     	tic.changePlayer();
     	assertEquals('o', tic.getCurrentPlayer());
     }
-
+  
 	@Test
 	public void testHorWinner()
 	{

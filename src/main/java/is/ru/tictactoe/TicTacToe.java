@@ -111,7 +111,7 @@ public class TicTacToe
 
         return (board[x][y] == '.');
     }
-
+  
     public void validateBoardIndex(int x, int y)
     {
         boolean xIsInvalid = ((x < 0) || (x > boardSize - 1));
