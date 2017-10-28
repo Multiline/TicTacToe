@@ -6,9 +6,8 @@ import org.junit.Test;
 public class TicTacToeTest
 {
     @Test
-    public void testCheckInitial()
+    public void testAdd()
     {
-        TicTacToe tic = new TicTacToe();
-        assertEquals('.', tic.getMark(1, 2));
+        assertEquals(2, TicTacToe.add(1, 1));
     }
 }
