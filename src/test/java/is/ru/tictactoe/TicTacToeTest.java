@@ -51,6 +51,14 @@ public class TicTacToeTest
     }
 
     @Test
+    public void testMarkSpaceFullAlready()
+    {
+        TicTacToe tic = new TicTacToe();
+        tic.markSpace(0,1);
+        assertEquals(false, tic.markSpace(0,1));
+    }
+
+    @Test
     public void testChangePlayer()
     {
     	TicTacToe tic = new TicTacToe();

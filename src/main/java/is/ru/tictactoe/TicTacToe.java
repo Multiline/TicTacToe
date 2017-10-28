@@ -36,9 +36,17 @@ public class TicTacToe
     	return mark;
     }
 
-    public void markSpace(int x, int y)
+    //Marks selected space with player's token
+    //Returns true if space was empty and marking suceeded
+    //Returns false if space was full already
+    public boolean markSpace(int x, int y)
     {
     	validateBoardIndex(x,y);
+
+        if(!isSpaceEmpty(x,y))
+        {
+            return false;
+        }
 
     	if(currentPlayer == 'x')
     	{
@@ -51,6 +59,8 @@ public class TicTacToe
     	else
     	{
     	}
+
+        return true;
 
     }
 
@@ -196,4 +206,5 @@ public class TicTacToe
 		
 		return false;	
 	}
+
 }
