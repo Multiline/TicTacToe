@@ -11,4 +11,5 @@ repositories
 dependencies
 {
     testImplementation 'junit:junit:4.12'
+    compile group: 'com.cedarsoftware', name: 'java-util', version: '1.8.0'
 }
