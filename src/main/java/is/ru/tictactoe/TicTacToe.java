@@ -68,7 +68,37 @@ public class TicTacToe
     	{
     	}
     }
+	
+	public boolean isWinner()
+	{
+		if (horWin())
+			return true;
+			
+		return false;
 
-
+	}
+	
+	// Checks the - pattern.
+	private boolean horWin()
+	{
+		for (int i = 0; i < boardSize; i++)
+		{
+			int counter = 0;
+			
+			for (int j = 0; j < boardSize; j++)
+			{
+				if (board[i][j] == currentPlayer)
+				{
+					counter++;
+				}
+			}
+			if (counter == 3)
+			{
+				return true;
+			}
+			
+		}
+		return false;
+	}
 
 }
