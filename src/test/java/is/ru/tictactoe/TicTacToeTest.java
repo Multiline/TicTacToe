@@ -99,6 +99,43 @@ public class TicTacToeTest
             String messageExpected  = "Error: Board index out of bounds";
             assertEquals(messageExpected, e.getMessage());
         }
+    }
 
+    @Test
+    public void testValidateBoardIndex()
+    {
+        TicTacToe tic = new TicTacToe();
+
+        try
+        {
+            tic.validateBoardIndex(1,2);
+        }
+        catch (Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+
+        try
+        {
+            tic.validateBoardIndex(-1,0);
+            Assert.fail();
+        }
+        catch(Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+
+        try
+        {
+            tic.validateBoardIndex(2,5);
+            Assert.fail();
+        }
+        catch(Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
     }
 }

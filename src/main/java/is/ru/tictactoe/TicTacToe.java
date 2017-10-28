@@ -26,13 +26,7 @@ public class TicTacToe
 
     public void markSpace(int x, int y)
     {
-    	boolean xIsInvalid = ((x < 0) || (x > boardSize - 1));
-    	boolean yIsInvalid = ((y < 0) || (y > boardSize - 1));
-
-    	if(xIsInvalid || yIsInvalid)
-    	{
-    		throw new IllegalArgumentException ("Error: Board index out of bounds");
-    	}
+    	validateBoardIndex(x,y);
 
     	if(currentPlayer == 'x')
     	{
@@ -70,6 +64,13 @@ public class TicTacToe
 
     public boolean isSpaceEmpty(int x, int y)
     {  
+        validateBoardIndex(x,y);
+
+        return (board[x][y] == '.');
+    }
+
+    public void validateBoardIndex(int x, int y)
+    {
         boolean xIsInvalid = ((x < 0) || (x > boardSize - 1));
         boolean yIsInvalid = ((y < 0) || (y > boardSize - 1));
 
@@ -77,8 +78,7 @@ public class TicTacToe
         {
             throw new IllegalArgumentException ("Error: Board index out of bounds");
         }
-
-        return (board[x][y] == '.');
     }
+
 
 }
