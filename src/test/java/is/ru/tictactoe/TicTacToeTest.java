@@ -72,4 +72,33 @@ public class TicTacToeTest
         tic.markSpace(1,1);
         assertEquals(false, tic.isSpaceEmpty(1,1));
     }
+
+    @Test 
+    public void testIsSpaceEmptyInvalidIndex()
+    {
+        try
+        {
+            TicTacToe tic = new TicTacToe();
+            tic.isSpaceEmpty(3,3);
+            Assert.fail();
+        }
+        catch (Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+
+        try
+        {
+            TicTacToe tic = new TicTacToe();
+            tic.isSpaceEmpty(-2,0);
+            Assert.fail();
+        }
+        catch (Exception e)
+        {
+            String messageExpected  = "Error: Board index out of bounds";
+            assertEquals(messageExpected, e.getMessage());
+        }
+
+    }
 }
