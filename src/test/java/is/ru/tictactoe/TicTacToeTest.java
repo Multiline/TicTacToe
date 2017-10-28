@@ -176,4 +176,18 @@ public class TicTacToeTest
             assertEquals(messageExpected, e.getMessage());
         }
     }
+
+    @Test
+    public void testReset()
+    {
+        TicTacToe tic = new TicTacToe();
+        //puting an 'x' in space 1, 1
+        tic.markSpace(1, 1);
+        //resetting the board
+        tic.reset();
+        //checking that the board has reset by checking that space 1,1 is '.' not'x'
+        assertEquals('.', tic.getMark(1, 2));
+        //checking that the player reset back to x
+        assertEquals('x', tic.getCurrentPlayer());
+    }
 }
