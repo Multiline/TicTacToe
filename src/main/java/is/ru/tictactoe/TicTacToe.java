@@ -4,17 +4,11 @@ public class TicTacToe
 {
 	private int boardSize = 3;
     private char[][] board = new char[boardSize][boardSize];
-    private char currentPlayer = 'x';
+    private char currentPlayer;
 
     public TicTacToe()
 	{
-    	for (int i = 0; i < 3; i++)
-		{
-    		for (int j = 0; j < 3; j++)
-			{
-    			board[i][j] = '.';
-    		}
-    	}
+    	reset();
     }
 
     public void printBoard()
@@ -237,6 +231,18 @@ public class TicTacToe
         }
 
         return false;
+    }
+  
+	public void reset()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                board[i][j] = '.';
+            }
+        }
+        currentPlayer = 'x';
     }
 
 }
