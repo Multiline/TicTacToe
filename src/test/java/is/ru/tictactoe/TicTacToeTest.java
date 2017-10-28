@@ -178,6 +178,55 @@ public class TicTacToeTest
     }
 
     @Test
+    public void testDraw()
+    {
+        TicTacToe tic = new TicTacToe();
+
+        //Fill board so no one wins
+        tic.markSpace(0,0);
+        tic.changePlayer();
+        tic.markSpace(0,1);
+        tic.changePlayer();
+        tic.markSpace(0,2);
+        tic.changePlayer();
+        tic.markSpace(1,0);
+        tic.changePlayer();
+        tic.markSpace(2,0);
+        tic.changePlayer();
+        tic.markSpace(1,1);
+        tic.changePlayer();
+        tic.markSpace(1,2);
+        tic.changePlayer();
+        tic.markSpace(2,2);
+        tic.changePlayer();
+        tic.markSpace(2,1);
+
+        assertEquals(true, tic.isDraw());
+    }
+
+    @Test
+    public void testDrawWhenWin()
+    {
+        TicTacToe tic = new TicTacToe();
+
+        //Fill in board so x wins
+        tic.markSpace(0,0);
+        tic.changePlayer();
+        tic.markSpace(0,1);
+        tic.changePlayer();
+        tic.markSpace(0,2);
+        tic.changePlayer();
+        tic.markSpace(1,0);
+        tic.changePlayer();
+        tic.markSpace(1,1);
+        tic.changePlayer();
+        tic.markSpace(1,2);
+        tic.changePlayer();
+        tic.markSpace(2,2);
+
+        assertEquals(false, tic.isDraw());
+    }
+
     public void testReset()
     {
         TicTacToe tic = new TicTacToe();
