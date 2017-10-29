@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/Multiline/TicTacToe.svg?branch=master)](https://travis-ci.org/Multiline/TicTacToe)
+
+[![codecov](https://codecov.io/gh/Multiline/TicTacToe/branch/master/graph/badge.svg)](https://codecov.io/gh/Multiline/TicTacToe)
+
 # TicTacToe
 
 Late-term Assignment. SC-T-303-HUGB, fall semester 2017
