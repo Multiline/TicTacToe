@@ -13,9 +13,9 @@ public class TicTacToe
 
     public void printBoard()
     {
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < boardSize; i++)
         {
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < boardSize; j++)
             {
                 System.out.printf(getMark(i, j) + " ");
             }
@@ -112,7 +112,7 @@ public class TicTacToe
 					counter++;
 				}
 			}
-			if (counter == 3)
+			if (counter == boardSize)
 			{
 				return true;
 			}
@@ -154,7 +154,7 @@ public class TicTacToe
 					counter++;
 				}
 			}
-			if (counter == 3)
+			if (counter == boardSize)
 			{
 				return true;
 			}
@@ -176,7 +176,7 @@ public class TicTacToe
 			}
 		}
 							
-		if (counter == 3)
+		if (counter == boardSize)
 		{
 			return true;
 		}
@@ -193,7 +193,7 @@ public class TicTacToe
 			}
 		}
 		
-		if (counter == 3)
+		if (counter == boardSize)
 		{
 			return true;
 		}
@@ -235,9 +235,9 @@ public class TicTacToe
   
 	public void reset()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < boardSize; i++)
         {
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < boardSize; j++)
             {
                 board[i][j] = '.';
             }
