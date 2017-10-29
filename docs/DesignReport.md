@@ -45,7 +45,7 @@ private boolean gameOver(char player, TicTacToe ticTacToe)
 ## Class Diagram
 The following is the initial class diagram for the potential structure of the console app. 
 
-<img src="https://github.com/Multiline/TicTacToe/blob/master/docs/classDiagram.png?raw=true" width=330>
+<img src="https://github.com/Multiline/TicTacToe/blob/master/diagrams/classDiagram.png?raw=true" width=330>
 
 
 
