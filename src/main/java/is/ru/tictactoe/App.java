@@ -38,14 +38,12 @@ public class App
 
     private static boolean gameOver(char player, TicTacToe ticTacToe) {
         if (ticTacToe.isWinner()) {
-            System.out.println("Player " + player + "wins.");
-            ticTacToe.reset();
+            System.out.println("Player " + player + " wins.");
             return true;
         }
 
         if (ticTacToe.isDraw()) {
             System.out.println("No more legal moves. Game ends in a draw.");
-            ticTacToe.reset();
             return true;
         }
 
@@ -56,15 +54,24 @@ public class App
         TicTacToe ticTacToe = new TicTacToe();
         boolean legalMove, isGameOver;
 
-        //System.out.println(ticTacToe.getMark(1,2));
         while(true) {
             char player = ticTacToe.getCurrentPlayer();
 
             do {
-              legalMove = makeMove(player, ticTacToe);
+                try {
+                    legalMove = makeMove(player, ticTacToe);
+                    if (!legalMove) {
+                        System.out.println("Error: Illegal move, please try again.");
+                    }
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage() + ", please try again.");
+                    legalMove = false;
+                }
             } while(!legalMove);
 
             if (gameOver(player, ticTacToe)) {
+                ticTacToe.printBoard();
+                ticTacToe.reset();
                 break;
             }
 
