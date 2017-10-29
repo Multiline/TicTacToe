@@ -1,17 +1,9 @@
 # Development Manual
 
-## Requirements
+The code can be downloaded from our repository https://github.com/Multiline/TicTacToe.git The code is written in Java. In order to run it, you have have to have version Java 1.8 or greater installed. Java can be installed from https://java.com/en/download/. The TicTacToe git comes with Gradle, in order to compile it. Further information on Gradle can be found on Gradle's website: https://gradle.org/docs/ 
 
-(What is needed to build on a fresh machine)
+After the Gradle script has been run a report on the building process can be accessed in the folder <code> build/reports/tests/test/index.html </code>.
 
-## How to Build
+The code is built up using the 'loosely coupled' coding method in order to change the coding later on. 
 
-(How to get the project to build on a fresh machine)
-
-## Source Control
-
-(Source control client and access to source control Build environment)
-
-## Dependencies 
-
-(Other necessary dependencies for development)
+It is worth mentioning that Heroku, was implemented for this project.
