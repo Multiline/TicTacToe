@@ -239,4 +239,10 @@ public class TicTacToeTest
         //checking that the player reset back to x
         assertEquals('x', tic.getCurrentPlayer());
     }
+
+    public void testBoardSize()
+    {
+        TicTacToe tic = new TicTacToe();
+        assertEquals(3, tic.getBoardSize());
+    }
 }

@@ -66,13 +66,25 @@ public class App
             } while(!legalMove);
 
             if (gameOver(player, ticTacToe)) {
-                ticTacToe.printBoard();
+                printBoard(ticTacToe);
                 ticTacToe.reset();
                 break;
             }
 
-            ticTacToe.printBoard();
+            printBoard(ticTacToe);
             ticTacToe.changePlayer();
+        }
+    }
+
+    public static void printBoard(TicTacToe ticTacToe)
+    {
+        for(int i = 0; i < ticTacToe.getBoardSize(); i++)
+        {
+            for (int j = 0; j < ticTacToe.getBoardSize(); j++)
+            {
+                System.out.printf(ticTacToe.getMark(i, j) + " ");
+            }
+            System.out.printf("%n");
         }
     }
 }
