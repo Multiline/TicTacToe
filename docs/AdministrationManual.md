@@ -9,4 +9,10 @@ If you are using Linux/UNIX; bash or shell you need to insert <code>./   </code>
 
 ## How to Deploy, Run and Maintain
 
-(How to deploy, run and maintain in case of client/server or web application)
+The code can be downloaded from our repository https://github.com/Multiline/TicTacToe.git The code is written in Java. In order to run it, you have have to have version Java 1.8 or greater installed. Jave can be installed from https://java.com/en/download/. The TicTacToe git comes with Gradle, in order to compile it. Further information on Gradle can be found on Gradle's website: https://gradle.org/docs/ 
+
+After the Gradle script has been run a report on the building process can be accessed in the folder <code> build/reports/tests/test/index.html </code>.
+
+The code is built up using the 'loosely coupled' coding method in order to change the coding later on. 
+
+It is worth mentioning that Heroku, was implemented for this project.
