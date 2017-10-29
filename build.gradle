@@ -14,6 +14,8 @@ dependencies
     compile group: 'com.cedarsoftware', name: 'java-util', version: '1.8.0'
 }
 
+task stage(dependsOn: ['installDist'])
+
 run
 {
     standardInput = System.in
