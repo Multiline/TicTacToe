@@ -1,6 +1,7 @@
 package is.ru.tictactoe;
 
 import java.util.*;
+import static spark.Spark.*;
 
 public class App
 {
