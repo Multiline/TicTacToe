@@ -11,8 +11,14 @@ public class App
 
         while (true) {
             System.out.println("Do you want to play a game? (1 = yes, 0 = no)");
-            Scanner S=new Scanner(System.in);
-            int answer = S.nextInt();
+            Scanner S = new Scanner(System.in);
+
+            char answer = S.next().charAt(0);
+            if(answer != '0' && answer != '1')
+            {
+                System.out.println("Illegal input");
+                continue;
+            }
 
             if (answer == 0) {
                 break;
@@ -22,15 +28,31 @@ public class App
         }
     }
 
-    private static boolean makeMove(char player, TicTacToe ticTacToe) {
-        System.out.print("Player " + player + ", pick a line: ");
-        Scanner S = new Scanner(System.in);
-        int line = S.nextInt();
-
-        System.out.print("Player " + player + ", pick a column: ");
-        int column = S.nextInt();
-
+    private static boolean makeMove(char player, TicTacToe ticTacToe) 
+    {        
+        System.out.println("Player " + player + ", pick a line: ");
+        int line = moveInput();
+        System.out.println("Player " + player + ", pick a column: ");
+        int column = moveInput();
+    
         return ticTacToe.markSpace(line, column);
+    }
+
+    private static int moveInput()
+    {
+        int input;
+        while(true)
+        {
+            Scanner S = new Scanner(System.in);
+            try {
+                input = S.nextInt();
+                return input;
+            }
+            catch(InputMismatchException e)
+            {
+                System.out.println("This is not a valid input, please try again");
+            }
+        }
     }
 
     private static boolean gameOver(char player, TicTacToe ticTacToe) {
@@ -79,6 +101,7 @@ public class App
 
     public static void printBoard(TicTacToe ticTacToe)
     {
+        System.out.printf("%n");
         for(int i = 0; i < ticTacToe.getBoardSize(); i++)
         {
             for (int j = 0; j < ticTacToe.getBoardSize(); j++)
@@ -87,5 +110,6 @@ public class App
             }
             System.out.printf("%n");
         }
+        System.out.printf("%n");
     }
 }
