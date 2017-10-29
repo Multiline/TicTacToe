@@ -11,16 +11,9 @@ public class TicTacToe
     	reset();
     }
 
-    public void printBoard()
+    public int getBoardSize()
     {
-        for(int i = 0; i < boardSize; i++)
-        {
-            for (int j = 0; j < boardSize; j++)
-            {
-                System.out.printf(getMark(i, j) + " ");
-            }
-            System.out.printf("%n");
-        }
+        return boardSize;
     }
 
     public char getMark(int x, int y)
