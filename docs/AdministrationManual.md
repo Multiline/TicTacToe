@@ -23,3 +23,4 @@ Please keep in mind that if you are using Linux/UNIX (or Git Bash) you need to i
 This command will run the TicTacToe game.
 
 When the program starts the user is greeted to welcome him to the game. 
+
