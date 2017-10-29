@@ -235,7 +235,7 @@ public class TicTacToeTest
         //resetting the board
         tic.reset();
         //checking that the board has reset by checking that space 1,1 is '.' not'x'
-        assertEquals('.', tic.getMark(1, 2));
+        assertEquals('.', tic.getMark(1, 1));
         //checking that the player reset back to x
         assertEquals('x', tic.getCurrentPlayer());
     }
