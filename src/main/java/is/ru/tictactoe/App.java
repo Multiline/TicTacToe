@@ -1,7 +1,6 @@
 package is.ru.tictactoe;
 
 import java.util.*;
-import java.util.Scanner;
 
 public class App
 {
@@ -13,7 +12,6 @@ public class App
             System.out.println("Do you want to play a game? (1 = yes, 0 = no)");
             Scanner S=new Scanner(System.in);
             int answer = S.nextInt();
-            S.nextLine();
 
             if (answer == 0) {
                 break;
@@ -27,11 +25,9 @@ public class App
         System.out.print("Player " + player + ", pick a line: ");
         Scanner S = new Scanner(System.in);
         int line = S.nextInt();
-        S.nextLine();
 
         System.out.print("Player " + player + ", pick a column: ");
         int column = S.nextInt();
-        S.nextLine();
 
         return ticTacToe.markSpace(line, column);
     }
