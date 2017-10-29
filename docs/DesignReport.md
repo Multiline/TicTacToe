@@ -15,7 +15,7 @@ Tic Tac Toe is played on a 3x3 grid by two players. Each player is assigned the 
 Names of classes should begin with an uppercase letter. Variable and method names should begin with a lowercase letter and be in camel casing. All code should be properly indented. 
 
 ## Environment
-Sublime Text will be used to code the game and GitHub will be used for source control. The group will use Gradle to test, build and run the program. Travis CI will be used to facilitate continuous integration and Heroku will be used to create and deploy the web app. 
+Sublime Text will be used to code the game and GitHub will be used for source control. The group will use Gradle to test, build and run the program. Travis CI will be used to facilitate continuous integration. Codecov (codecov.io) is used to generate reports on code coverage.
 
 ## Classes and Functions
 The console program will be implemented using two classes, `TicTacToe`, and `App`. `TicTacToe` implements all logic, while `App` handles interactions with the user. 
