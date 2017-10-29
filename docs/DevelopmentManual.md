@@ -28,6 +28,6 @@ The Gradle check compiles and runs all the unit tests.
 
 3. To merge your changes with the Master, you need to push your commits to the branch and then create a pull request. Other contributer then must review the commits and wait for check from Travis (a continueous integration service, that checks the code (builds and tests the code for correctness). If everything is OK the other contributer (the reviewer) will accepted the commit to the Master.
 
-4. To build the project you write the following command: <code> gradlew build (in Windows) and gradlew build (in Linux/UNIX) </code>. 
+4. To build the project you write the following command: <code> gradlew build (in Windows) and ./gradlew build (in Linux/UNIX) </code>. 
 
 It is worth mentioning that Heroku, was implemented for this project.
