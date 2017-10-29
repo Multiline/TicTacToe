@@ -6,6 +6,8 @@ Late-term Assignment. SC-T-303-HUGB, fall semester 2017
 ## About
 The main objective of this project as to implement the game TicTacToe. The main focus was on the infrastructure and best coding practices 
 
+Further information on the documentation can be found under the "docs" folder.
+
 ### Team 
 * Hannes Arnórsson - hannesa02@ru.is 
 * Hjörtur Þór Daðason - hjorturd15@ru.is
